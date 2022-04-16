@@ -38,7 +38,7 @@ contract HelloWorldTest is DSTest {
         helloWorldContract.addAdmin(address(10));
     }
 
-    function testFailOtherThanAdminCantUpdateMessage() public {
+    function testFailOtherThanOwnerCantAddAdmin() public {
         helloWorldContract.addAdmin(address(1));
     }
 
